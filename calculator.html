@@ -1,0 +1,77 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+      <script>
+      function solutions(typ) {
+          var arg1= document.getElementById("number1").value;
+          var arg2= document.getElementById("number2").value;
+        
+    switch(typ){
+        case 'a': 
+                  document.getElementById("solution").value=parseInt(arg1)+parseInt(arg2);
+                  break;
+        case 's': 
+                  document.getElementById("solution").value=parseInt(arg1)-parseInt(arg2);
+                  break;
+        case 'm': 
+                  document.getElementById("solution").value=parseInt(arg1)*parseInt(arg2);
+                  break;
+        case 'd': 
+                  document.getElementById("solution").value=parseInt(arg1) / parseInt(arg2);
+                  break;
+    }
+      }         
+
+
+
+
+      </script>
+
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1>CALCULATOR</h1>
+    <br>
+        <div class="row form-group">
+            <div class="col-md-3">
+            
+                <input type="text" class="form-control" id="number1" placeholder="number" aria-label="number" aria-describedby="basic-addon1">
+                
+               
+            </div>
+              
+           
+  
+            <div class="col-md-3">
+            
+                <input type="text" class="form-control" id="number2" placeholder="number" aria-label="number" aria-describedby="basic-addon1">
+               
+            </div>
+             
+            <div class="col-md-1">
+            
+                <input type="text" class="form-control" placeholder="=" aria-label="=" aria-describedby="basic-addon1">
+            </div>
+            
+        </br>
+        <div>
+            <button type="button" class="btn btn-success" onclick="solutions('a');" id="add" >+</button> 
+            <button type="button" class="btn btn-success" onclick="solutions('s');" id="sub">-</button>
+            <button type="button" class="btn btn-success" onclick="solutions('m');" id="mul">*</button>
+            <button type="button" class="btn btn-success" onclick="solutions('d');" id="div">/</button>   
+        </div>
+
+            <div class="col-md-4">
+            
+                <input type="text" class="form-control" id="solution" placeholder="solution">
+                
+            </div>
+             
+
+
+    </div>
+</body>
+</html>
